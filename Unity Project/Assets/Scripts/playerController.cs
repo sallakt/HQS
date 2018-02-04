@@ -10,6 +10,12 @@ public class playerController : MonoBehaviour {
     bool facingRight;
     bool grounded;
 
+    //Declare a variable to fire
+    public Transform gunTip;
+    public GameObject bullet;
+    float fireRate = 0.5f; //fire per 0.5s
+    float nextFire = 0; //fire immediately;
+
     Rigidbody2D myBody;
     Animator myAni;
 
@@ -39,6 +45,12 @@ public class playerController : MonoBehaviour {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             }
         }
+
+        //Fire by mouse
+        if (Input.GetAxisRaw("Fire1") > 0)
+        {
+            fireBullet();
+        }
 	}
 
     void flip() {
@@ -52,6 +64,21 @@ public class playerController : MonoBehaviour {
         if(other.gameObject.tag == "Ground")
         {
             grounded = true;
+        }
+    }
+
+    //Fire function
+    void fireBullet() {
+        if(Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (facingRight)
+            {
+                Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!facingRight) {
+                Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+            }
         }
     }
 }
