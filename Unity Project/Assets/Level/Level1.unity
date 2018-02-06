@@ -176,6 +176,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -222,7 +227,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.86
+  m_Radius: 1.8
 --- !u!1001 &517030141
 Prefab:
   m_ObjectHideFlags: 0
@@ -286,6 +291,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -352,6 +362,11 @@ Prefab:
       propertyPath: m_Name
       value: simpleGround
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -368,9 +383,10 @@ GameObject:
   - component: {fileID: 715256364}
   - component: {fileID: 715256365}
   - component: {fileID: 715256366}
+  - component: {fileID: 715256367}
   m_Layer: 0
   m_Name: 'Character '
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +442,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: a83c8ded0fb4eac41884480695adaa7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ba3e15438fcfab448a6af828a7cc323, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -443,7 +459,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715256360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 10, z: 5}
+  m_LocalPosition: {x: -20.22, y: 10, z: 5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 721441903}
@@ -496,10 +512,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d0142cc6eba52478829f08e8be4469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 8
   jumpHeight: 15
   gunTip: {fileID: 721441903}
   bullet: {fileID: 1066955804114018, guid: 79e9981339944fd4093dcd1ebd82d2d5, type: 2}
+--- !u!114 &715256367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715256360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665fb443f178afc46b48ccdfb8cc01c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  currentHealth: 0
+  bloodEffect: {fileID: 1393126457744536, guid: 96e1e652c8a252941923914eadd42c51,
+    type: 2}
 --- !u!1 &721441902
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +622,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -657,6 +693,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -719,6 +760,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -790,7 +836,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358272464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.2, y: 8, z: 5}
+  m_LocalPosition: {x: 51.3, y: 9.3, z: 5}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -833,6 +879,7 @@ GameObject:
   - component: {fileID: 1396755720}
   - component: {fileID: 1396755723}
   - component: {fileID: 1396755724}
+  - component: {fileID: 1396755725}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Shootable
@@ -890,7 +937,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 83b9c5d9fcb3cd149a30a237c286ce55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -908,7 +955,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1396755719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.4, y: 9.8, z: 5}
+  m_LocalPosition: {x: -9.2, y: 8.2, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 408543405}
@@ -929,7 +976,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.68
+  m_Radius: 1.8
 --- !u!114 &1396755724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,6 +990,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
+--- !u!114 &1396755725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1396755719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172169c38eed12e4cb6754f3a9fc7c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  pushBackForce: 30
 --- !u!1001 &1401089751
 Prefab:
   m_ObjectHideFlags: 0
@@ -1006,6 +1066,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -1072,6 +1137,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -1211,6 +1281,11 @@ Prefab:
       propertyPath: m_Name
       value: 'simpleGround '
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
@@ -1372,6 +1447,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 5.6
       objectReference: {fileID: 0}
+    - target: {fileID: 61055807878556174, guid: f02e97bebcc65c2488567854fa11cc85,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6fcf3394a062fd8489394c0dde5ace9a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f02e97bebcc65c2488567854fa11cc85, type: 2}
   m_IsPrefabParent: 0
