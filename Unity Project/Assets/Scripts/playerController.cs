@@ -39,6 +39,7 @@ public class playerController : MonoBehaviour {
         else if (move < 0 && facingRight) {
             flip();
         }
+		//jumping
         if (Input.GetKey(KeyCode.W)){
             if (grounded){
                 grounded = false;
@@ -53,6 +54,7 @@ public class playerController : MonoBehaviour {
         }
 	}
 
+	//Fliping character function
     void flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
