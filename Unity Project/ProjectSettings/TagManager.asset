@@ -16,6 +16,7 @@ TagManager:
   - 
   - 
   - Enemy
+  - laserLatch
   - 
   - 
   - 
@@ -37,8 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - laser
   m_SortingLayers:
   - name: Default
     uniqueID: 0

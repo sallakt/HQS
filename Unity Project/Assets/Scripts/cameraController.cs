@@ -7,7 +7,7 @@ public class cameraController : MonoBehaviour {
 
 	public Camera playCamera;
 	public Camera mapCamera;
-	private bool play = true;
+	private bool playing = true;
 
 	// Use this for initialization
 	void Start () {
@@ -17,21 +17,21 @@ public class cameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.C) && play) {
-			toggleCamera (ref play);
-		} else if (Input.GetKeyDown (KeyCode.C) && !play) {
-			toggleCamera (ref play);
+		if (Input.GetKeyDown (KeyCode.C) && playing) {
+			toggleCamera (ref playing);
+		} else if (Input.GetKeyDown (KeyCode.C) && !playing) {
+			toggleCamera (ref playing);
 		}
 	}
 
-	private void toggleCamera(ref bool play) {
-		if (play) {
+	private void toggleCamera(ref bool playing) {
+		if (playing) {
 			playCamera.gameObject.SetActive (false);
 			mapCamera.gameObject.SetActive (true);
 		} else {
 			playCamera.gameObject.SetActive (true);
 			mapCamera.gameObject.SetActive (false);
 		}
-		play = !play;
+		playing = !playing;
 	}
 }

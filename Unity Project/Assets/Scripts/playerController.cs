@@ -34,10 +34,10 @@ public class playerController : MonoBehaviour {
         myBody.velocity = new Vector2(move * maxSpeed, myBody.velocity.y);
         if (move > 0 && !facingRight)
         {
-            flip();
+            flip(facingRight);
         }
         else if (move < 0 && facingRight) {
-            flip();
+			flip(facingRight);
         }
 		//jumping
         if (Input.GetKey(KeyCode.W)){
@@ -55,11 +55,18 @@ public class playerController : MonoBehaviour {
 	}
 
 	//Fliping character function
-    void flip() {
+	void flip(bool right) {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
+		Vector3 spriteChange = transform.localPosition;
+		//Use in case the sprite cannot be changed		
+		if (right) {
+			spriteChange -= new Vector3 (3, 0, 0);
+		} else
+			spriteChange += new Vector3 (3, 0, 0);
+		theScale.x *= -1;
         transform.localScale = theScale;
+		transform.localPosition = spriteChange;
     }
 
     void OnCollisionEnter2D(Collision2D other) {
