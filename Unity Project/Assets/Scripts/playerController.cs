@@ -45,7 +45,11 @@ public class playerController : MonoBehaviour {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             }
         }
-
+        /* 
+         * float moveVerticle = Input.GetAxis("Vertical");
+         * Animation jumpCrouch = getComponent<Animator>;
+         * 
+         * */
         //Fire by mouse
         if (Input.GetAxisRaw("Fire1") > 0)
         {

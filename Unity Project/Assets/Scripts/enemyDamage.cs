@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyDamage : MonoBehaviour {
     public float damage;
     float damageRate = 0.5f;
-    public float pushBackForce;
+    public float pushBackForce; //set value
     float nextDamage;
 	// Use this for initialization
 	void Start () {
@@ -32,9 +32,10 @@ public class enemyDamage : MonoBehaviour {
     void pushBack(Transform pushedObject)
     {
         Vector2 pushDirection = new Vector2(0, (pushedObject.position.y - transform.position.y)).normalized;
+        //Debug.Log("push direction =" + pushDirection);
         pushDirection *= pushBackForce;
         Rigidbody2D pushRigidBody = pushedObject.gameObject.GetComponent<Rigidbody2D>();
-        pushRigidBody.velocity = Vector2.zero;
+        pushRigidBody.velocity = new Vector2(0,0);
         pushRigidBody.AddForce(pushDirection, ForceMode2D.Impulse);
     }
 }
