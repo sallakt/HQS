@@ -12,9 +12,14 @@ public class Blade : MonoBehaviour {
 		this.transform.Rotate(new Vector3(0,0,rotationspeed));
 	}
 	//what happens when touched - death
-	void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerEnter2D(Collider2D collision){
+		if (collision.CompareTag ("Player")) {
+			SceneManager.LoadScene ("Level1");
+		}
+	}
+	/*void OnTriggerEnter2D(Collider2D other){
 		//Destroy (other.gameObject);
 		SceneManager.LoadScene("Level1");
 		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
+	}*/
 }
