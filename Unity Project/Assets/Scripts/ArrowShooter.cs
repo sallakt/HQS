@@ -13,7 +13,7 @@ public class ArrowShooter : MonoBehaviour {
 	public float arrowDelay;
 
 	public bool fromLeft = false;
-	public bool shoot;
+	public bool shoot = false;
 
 	private Vector2 direction2;
 
