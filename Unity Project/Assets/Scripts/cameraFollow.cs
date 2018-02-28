@@ -6,11 +6,11 @@ public class cameraFollow : MonoBehaviour {
     public Transform target;
     public float smoothing;
     Vector3 offset;
-    float lowY;
+    public float lowY;
 	// Use this for initialization
 	void Start () {
         offset = transform.position - target.position;
-        lowY = transform.position.y;
+        //lowY = transform.position.y ;
 	}
 	
 	// Update is called once per frame
