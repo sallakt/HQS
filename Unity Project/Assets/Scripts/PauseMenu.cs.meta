@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 67157625dde262b449dc8ee93317ec4d
 timeCreated: 1519717375
+=======
+<<<<<<< HEAD
+guid: 67157625dde262b449dc8ee93317ec4d
+timeCreated: 1519717375
+=======
+guid: f0f8f9ce3520dfc498a236e9bf9fe3f2
+timeCreated: 1519301189
+>>>>>>> d1f87b2275f33512aa1bc9b641a98cd71dd7ab96
+>>>>>>> ae0141dc51bc3ff6af970d89aced85fd2d8cf417
 licenseType: Free
 MonoImporter:
   externalObjects: {}

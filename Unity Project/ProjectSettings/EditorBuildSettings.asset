@@ -11,6 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Level1.unity
     guid: a39af94ea22692e42bc7b4ee48ad0c58
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ae0141dc51bc3ff6af970d89aced85fd2d8cf417
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/2296f4d57075ed64ea4950b63f33e202
     guid: 2296f4d57075ed64ea4950b63f33e202
@@ -23,3 +27,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/d4b7bbf8c91d7324893b0ff7d20011cf
     guid: d4b7bbf8c91d7324893b0ff7d20011cf
+<<<<<<< HEAD
+=======
+=======
+  - enabled: 1
+    path: Assets/Level/Level2.unity
+    guid: 8d6a0ac158d004d4885df38335965784
+>>>>>>> d1f87b2275f33512aa1bc9b641a98cd71dd7ab96
+>>>>>>> ae0141dc51bc3ff6af970d89aced85fd2d8cf417
