@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4754617677953992}
   - component: {fileID: 198497711820219128}
   - component: {fileID: 199529839079643594}
+  - component: {fileID: 114342282960383846}
   m_Layer: 0
   m_Name: Blood Effect
   m_TagString: Untagged
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114342282960383846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393126457744536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d10872b9aa55b4baf638f183489be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveTime: 1
 --- !u!198 &198497711820219128
 ParticleSystem:
   m_ObjectHideFlags: 1

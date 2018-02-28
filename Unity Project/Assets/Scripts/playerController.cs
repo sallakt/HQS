@@ -9,9 +9,11 @@ public class playerController : MonoBehaviour {
     public float jumpHeight;
     bool facingRight;
     bool grounded;
+    bool crouching;
 
     //Declare a variable to fire
     public Transform gunTip;
+    public Transform gunTipCrouching;
     public GameObject bullet;
     float fireRate = 0.5f; //fire per 0.5s
     float nextFire = 0; //fire immediately;
@@ -31,6 +33,8 @@ public class playerController : MonoBehaviour {
 	void FixedUpdate () {
         float move = Input.GetAxis("Horizontal");
         myAni.SetFloat("Speed", Mathf.Abs(move));
+        myAni.SetBool("Grounded", grounded);
+        myAni.SetBool("Crouch", crouching);
         myBody.velocity = new Vector2(move * maxSpeed, myBody.velocity.y);
         if (move > 0 && !facingRight)
         {
@@ -45,11 +49,13 @@ public class playerController : MonoBehaviour {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             }
         }
-        /* 
-         * float moveVerticle = Input.GetAxis("Vertical");
-         * Animation jumpCrouch = getComponent<Animator>;
-         * 
-         * */
+        if (Input.GetKeyDown(KeyCode.S)) {
+            crouching = true;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            crouching = false;
+        }
         //Fire by mouse
         if (Input.GetAxisRaw("Fire1") > 0)
         {
@@ -78,10 +84,24 @@ public class playerController : MonoBehaviour {
             nextFire = Time.time + fireRate;
             if (facingRight)
             {
-                Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                if (crouching == true)
+                {
+                    Instantiate(bullet, gunTipCrouching.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                }
+                else
+                {
+                    Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                }
             }
             else if (!facingRight) {
-                Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                if (crouching == true)
+                {
+                    Instantiate(bullet, gunTipCrouching.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                }
+                else
+                {
+                    Instantiate(bullet, gunTip.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                }
             }
         }
     }
